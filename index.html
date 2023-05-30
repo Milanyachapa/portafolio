@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css" type="text/css">
+        <link rel="shortcut icon" href="./images/iconlog2.png" type="image/x-icon">
+        <title>Encriptador</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container-logo-alura">
+                <a class="a-logo-alura" href="https://www.aluracursos.com" target="_blank"><img class="logo-alura" src="./images/Logo.svg" alt="logo de alura."></a>
+            </div>
+                <a href="" target="_self"><h1 class="titulo-principal">Encriptador de texto </h1></a>
+        </header>
+        <main>
+            <!--Seccion encriptar-->
+            <section class="container-encriptar">
+                <div class="container-ingresar">
+                    <div class="advertencia">
+                        <h6>Escriba letras minúsculas y sin acentos </h6>
+                    </div>
+                    <div class="container-textarea-encriptar">
+                        <textarea class="texto-encriptar" id="texto-encriptar" type="text" 
+                        cols="80" rows="25" placeholder="Ingrese el texto aquí..." autofocus="false"></textarea>
+                    </div>
+                    <div class="btns-herramientas">
+                        <button class="btn" id="btn-borrar-1" type="button" value="Borrar">Limpiar!</button>
+                    </div>
+                    <div class="btns-inputs">
+                        <button class="btn" id="btn-encriptar" type="button" value="Encriptar">Encriptar!</button>
+                        <button class="btn" id="btn-desencriptar" type="button" value="Desencriptar">Desencriptar!</button>
+                    </div>
+                </div>
+            </section>
+            <!--Esto es para la animacion de encriptar o descriptar el codigo-->
+            <div class="animacion" hidden></div>
+            <!--Seccion desencriptar-->
+            <section class="container-desencriptar">
+                <div class="container-resultado">
+                    <div class="container-cubierta" id="cubierta">
+                        <img id="image-1" src="./images/encriptar.png" alt="imagen encriptacion">
+                        <p class="mensage-1">Estoy listo para poder procesar </p>
+                        <p class="mensage-2">Ingresa el texto a encriptar o desencriptar.</p>
+                    </div>
+                    <div class="container-textarea-desencriptar">
+                        <textarea class="texto-desencriptar" id="texto-desencriptar" type="text" 
+                        cols="40" rows="25" placeholder="Hola somos Alura como estan"></textarea>
+                    </div>
+                    <div class="btns-herramientas" id="btns-herramientas">
+                        <button class="btn" id="btn-copiar" type="button" value="Copiar">Copiar</button>
+                        <button class="btn" id="btn-borrar-2" type="button" value="Borrar">Pegar</button>
+                    </div>
+                </div>
+            </section>
+
+
+  <script>
+    document.getElementById('btn-borrar-2').addEventListener('click', function() {
+      var campoTexto = document.getElementById('texto-encriptar');
+      
+      // Verificar si el navegador admite la API de Clipboard
+      if (navigator.clipboard && typeof navigator.clipboard.readText === 'function') {
+        navigator.clipboard.readText()
+          .then(function(text) {
+            campoTexto.value = text;
+          })
+          .catch(function(err) {
+            console.error('Error al leer el portapapeles: ', err);
+          });
+      } else {
+        // Si el navegador no admite la API de Clipboard, mostrar un mensaje alternativo
+        campoTexto.value = 'La función Pegar no es compatible en este navegador.';
+      }
+    });
+  </script>
+            <!--Footer-->
+            <footer>
+                <section class="footer">
+                    <div class="footer-logo">
+                        <p>&copy Desarrollado por milan yachapa para alura latam</p>
+                        <a class="a-logo-social-media" href="https://discord.com/channels/@me" target="_blank" target="_blank"><img class="logo-social-media" id="logo-discord" src="./images/discord.png" alt="logo-discord"></a>
+                        <a class="a-logo-social-media" href="https://www.linkedin.com/in/milanyb/" target="_blank"><img class="logo-social-media" id="logo-linkedin" src="./images/linkidin.png" alt="logo-linkedIn"></a>
+                        <a class="a-logo-social-media" href="https://github.com/Milanyachapa" target="_blank"><img class="logo-social-media" id="logo-github" src="./images/github.png" alt="logo-github"></a>
+                    </div>
+                </section>
+            </footer>
+        </main>
+        <script src="./script.js" type="text/javascript"></script>
+        <script src="jquery.js" type="text/javascript" ></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>

@@ -1,0 +1,347 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap";
+
+/*Propiedades globales*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lato', sans-serif;
+}
+
+body{
+    background: #7a0505; 
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  
+    background: linear-gradient(to right, #8a868a, #bfc1c7); 
+}
+
+textarea{
+    background-color: #ffffff;
+    color: #0a0a0c;
+    padding: 0px 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0px 10px 10px 5px #4c4c4c;
+    -moz-box-shadow: inset 0px 10px 10px 5px #4c4c4c;
+    box-shadow: inset 0px 10px 10px 5px #4c4c4c;
+    resize: none;
+    transition: 1s;
+}
+
+textarea::placeholder{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: larger;
+}
+
+textarea::-webkit-input-placeholder{
+    text-align: center;
+    line-height: 100px;
+}
+
+textarea:focus{
+    outline: none;
+    -webkit-box-shadow: inset 3px 5px 10px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: inset 3px 5px 10px 0px rgba(0,0,0,0.54);
+    box-shadow: inset 3px 5px 10px 0px rgba(0,0,0,0.54);
+}
+
+/*Fin de propiedades globales*/
+
+
+
+/*Propiedades botones*/
+.btn{
+    background-color: #2b0bdd;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+   -webkit-box-shadow: 0px 5px 3px 0px #38424C;
+    -moz-box-shadow: 0px 3px 0px 0px #38424C;
+    box-shadow: 0px 5px 3px 0px #38424C;
+    transition: 0.7s;
+}
+
+.btn:hover{
+    background-color: #e5e5e5;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 1px 0px #38424C;
+    -moz-box-shadow: 0px 2px 1px 0px #38424C;
+    box-shadow: 0px 2px 1px 0px #38424C;
+    transform: translateY(3px);
+}
+
+.btns-herramientas{
+    margin: 10px;
+    display: flex;
+    justify-content:center;
+}
+
+.btns-inputs{
+    display: flex;
+    justify-content:space-around;
+}
+
+#btns-herramientas{
+    justify-content: space-around;
+    margin-left: 20px;
+    position: relative;
+    top:85px;
+}
+/*Fin propiedades botones*/
+
+
+
+
+/*Encabezado*/
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+    
+}
+
+.container-logo-alura{
+    margin: 15px;
+    
+
+}
+
+.logo-alura{
+    object-fit: contain;
+    transition: 1s;
+}
+
+.logo-alura:hover{
+    transform: translateY(-3px);
+}
+
+.titulo-principal{
+    color: #ffffff;
+    margin: 40px;
+    position: relative;
+    right: 500px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    
+}
+/*Fin del encabezado*/
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+
+/*Seccion encriptar*/
+.container-encriptar{
+    background-color: #b9b9be;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 20px 10px 5px #38424C;
+    -moz-box-shadow: 0px 20px 10px 5px #38424C;
+    box-shadow: 0px 20px 10px 5px #38424C;
+    transition: 1s;
+}
+.container-encriptar-shadow{
+    transform: translateY(5px);
+    -webkit-box-shadow: 0px 5px 5px 5px #38424C;
+    -moz-box-shadow: 0px 5px 5px 5px #38424C;
+    box-shadow: 0px 5px 5px 5px #38424C;
+}
+
+.advertencia{
+    display: inline-block;
+    margin: 5px 0px;
+}
+
+.advertencia > h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+/*Fin de seccion encriptar*/
+
+/*Seccion desencriptar*/
+.container-desencriptar{
+    background-color: #b9b9be;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 15px 10px 5px #38424C;
+    -moz-box-shadow: 0px 15px 10px 5px #38424C;
+    box-shadow: 0px 15px 10px 5px #38424C;
+    transition: 1s;
+}
+
+.container-desencriptar-shadow{
+    transform: translateY(5px);
+    -webkit-box-shadow: 0px 5px 5px 5px #38424C;
+    -moz-box-shadow: 0px 5px 5px 5px #38424C;
+    box-shadow: 0px 5px 5px 5px #38424C;
+}
+
+/*desencriptar texto area */
+.container-cubierta{
+    background-color: #ffffff;
+    width: 296px;
+    height: 380px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    border:2px solid transparent;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-box-shadow: inset 0px 10px 10px 5px #4c4c4c;
+    -moz-box-shadow: inset 0px 10px 10px 5px #4c4c4c;
+    box-shadow: inset 0px 10px 10px 5px #4c4c4c;
+
+
+}
+
+/*Footer*/
+footer{
+    margin: 25px 0px 0px;
+    margin-top: 50px;
+    font-size: small;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-logo > p{
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo-social-media{
+    max-width: 5%;
+    max-height: 5%;
+    transition: 1s;
+}
+
+.logo-social-media:hover{
+    transform:translateY(-10px);
+}
+/*Fin del footer*/
+
+
+/*Animacion de encriptar o desencriptar*/
+.animacion{
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    left: 15%;
+    top: 23%;
+    z-index: 100;
+    background: url(./gif/bubble-gum-verification.gif) center no-repeat #ffff;
+    opacity: 0.7;
+}
+/*Fin animacion de encriptar o desencriptar*/
+
+
+/*
+se debe mejorar a un la cubierta no tengo las medidas exactas 
+*/
+
+
+/*Media 1095*/
+@media screen and (max-width: 1095px){
+    .animacion{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 30%;
+        left: 0px;
+        margin: auto;
+    }
+}
+
+/*Media 1024*/
+@media screen and (max-width: 1024px){
+    textarea{
+        width: 96%;
+        font-size:medium;
+    }
+    .btn{
+        width: 25%;
+    }
+    .container-encriptar{
+        width: 80%;
+        margin: 20px auto;
+        padding-right: 20px;
+    }
+    .container-desencriptar{
+        width:40%;
+        margin: 20px auto;
+        padding-right: 44px;
+    }
+    .advertencia > h6{
+        font-size:medium;
+    }
+    .container-cubierta{
+        width: 40%;
+        height: 53%;
+    }
+    .animacion{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 20%;
+        margin: auto;
+    }
+}
+
+/*Media 768*/
+@media screen and (max-width: 768px){
+    textarea{
+        width: 95%;
+        font-size:medium;
+    }
+    .btn{
+        width: 40%;
+    }
+    .container-encriptar{
+        width: 80%;
+        padding-right: 25px;
+    }
+    .container-desencriptar{
+        width: 56.5%;
+        padding-right: 35px;
+    }
+    .container-cubierta{
+        width: 56%;
+        height: 455px;
+    }
+    .animacion{
+        width: 60%;
+        height: 50%;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 12%;
+        margin: auto;
+    }
+    .logo-social-media{
+        max-width: 10%;
+        max-height: 10%;
+        transition: 1s;
+    }
+}
+
+/*Media 560*/
+@media screen and (max-width: 560px){
+    .container-encriptar{
+        padding-right: 30px;
+    }
+}
